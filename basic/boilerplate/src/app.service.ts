@@ -1,12 +1,18 @@
 import { Injectable } from '@nestjs/common';
-
+import { Pig } from "./interface/app.interface";
 @Injectable()
 export class PigService {
-  getPigs(): string {
-    return 'Get Many pigs!';
+  private readonly pigs: Pig[] = [];
+
+  createPig(pig: Pig){
+    this.pigs.push(pig)
   }
 
-  getPig(): string {
-    return 'Get One pig!';
+  getPigs(): Pig[] {
+    return this.pigs;
+  }
+
+  getPig(name: string): Pig {
+    return this.pigs.find(pig => pig.name === name)
   }
 }
