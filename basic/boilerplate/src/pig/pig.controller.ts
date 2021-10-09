@@ -1,7 +1,7 @@
 import { Body, Controller, Get, HttpCode, Param, Post } from '@nestjs/common';
-import { PigService } from "./app.service";
-import { CreatePigDto } from "./dto/app.dto";
-import { Pig } from "./interface/app.interface";
+import { PigService } from "./pig.service";
+import { CreatePigDto } from "./dto/pig.dto";
+import { Pig } from "./interface/pig.interface";
 
 @Controller('pig')
 export class PigController {

@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { Pig } from "./interface/app.interface";
+import { Pig } from "./interface/pig.interface";
 @Injectable()
 export class PigService {
   private readonly pigs: Pig[] = [];
